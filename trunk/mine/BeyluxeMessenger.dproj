@@ -1,0 +1,140 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2c859fe9-b516-450d-80ba-5edd5a37a0b1}</ProjectGuid>
+    <MainSource>BeyluxeMessenger.dpr</MainSource>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>BeyluxeMessenger.exe</DCC_DependencyCheckOutputName>
+    <DCC_UsePackage>vcl;rtl;vclx;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;teeui;teedb;tee;vclactnband;vclshlctrls;dclOfficeXP;HiChatter</DCC_UsePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_IOChecking>False</DCC_IOChecking>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_MapFile>3</DCC_MapFile>
+    <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_ResourcePath>
+    <DCC_ObjPath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_ObjPath>
+    <DCC_IncludePath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_IncludePath>
+    <DCC_Define>USE_FASTMOVE;madExcept;RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_IOChecking>False</DCC_IOChecking>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_SymbolReferenceInfo>2</DCC_SymbolReferenceInfo>
+    <DCC_MapFile>3</DCC_MapFile>
+    <DCC_UnitSearchPath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_UnitSearchPath>
+    <DCC_ResourcePath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_ResourcePath>
+    <DCC_ObjPath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_ObjPath>
+    <DCC_IncludePath>$(DELPHI)\Lib\Debug;C:\Program Files\EXECryptor\SDK\Delphi</DCC_IncludePath>
+    <DCC_Define>USE_FASTMOVE;madExcept;DEBUG</DCC_Define>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">True</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">0</VersionInfo><VersionInfo Name="MinorVer">2</VersionInfo><VersionInfo Name="Release">1</VersionInfo><VersionInfo Name="Build">15</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName"></VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">0.2.1.15</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">BeyluxeMessenger.dpr</Source></Source><Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dcldbxcds4100.bpl">CodeGear SimpleDataset Component (DBX)</Excluded_Packages>
+      <Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\5.0\Bpl\JvAppFrmD11D.bpl">JVCL Application and Form Components</Excluded_Packages>
+    </Excluded_Packages></Delphi.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="BeyluxeMessenger.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="AboutUnit.pas">
+      <Form>AboutForm</Form>
+    </DCCReference>
+    <DCCReference Include="AddBuddyUnit.pas">
+      <Form>AddBuddyForm</Form>
+    </DCCReference>
+    <DCCReference Include="AdminPanelUnit.pas">
+      <Form>AdminControlPanel</Form>
+    </DCCReference>
+    <DCCReference Include="bitmap\GetLockPassword.pas">
+      <Form>GetLockCode</Form>
+    </DCCReference>
+    <DCCReference Include="BrowseRoomsUnit.pas">
+      <Form>BrowseRoomsForm</Form>
+    </DCCReference>
+    <DCCReference Include="ChangePasswordUnit.pas">
+      <Form>ChangePasswordForm</Form>
+    </DCCReference>
+    <DCCReference Include="ClientThread.pas" />
+    <DCCReference Include="CommunicatorTypes.pas" />
+    <DCCReference Include="CreateEditRoomUnit.pas">
+      <Form>CreateEditMyRoom</Form>
+    </DCCReference>
+    <DCCReference Include="CustomAwayMsgForm.pas">
+      <Form>CustomAwayMessageForm</Form>
+    </DCCReference>
+    <DCCReference Include="IdeSN.pas" />
+    <DCCReference Include="InviteMessageBox.pas">
+      <Form>InviteMsgBoxForm</Form>
+    </DCCReference>
+    <DCCReference Include="InviteUserUnit.pas">
+      <Form>InviteUserForm</Form>
+    </DCCReference>
+    <DCCReference Include="JoinRoomAsAdmin.pas">
+      <Form>JoinRoomAsAdminForm</Form>
+    </DCCReference>
+    <DCCReference Include="LoginProgressUnit.pas">
+      <Form>LoginProgressForm</Form>
+    </DCCReference>
+    <DCCReference Include="LoginUnit.pas">
+      <Form>LoginForm</Form>
+    </DCCReference>
+    <DCCReference Include="LogThread.pas" />
+    <DCCReference Include="MainUnit.pas">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="ManageCustumAwayMsgForm.pas">
+      <Form>ManageCustomAwayMsgForm</Form>
+    </DCCReference>
+    <DCCReference Include="MiniNotifyUnit.pas">
+      <Form>MiniNotifyForm</Form>
+    </DCCReference>
+    <DCCReference Include="MyWebcamUnit.pas">
+      <Form>MyCamForm</Form>
+    </DCCReference>
+    <DCCReference Include="OfflinesUnit.pas">
+      <Form>OfflinesForm</Form>
+    </DCCReference>
+    <DCCReference Include="PlayThreadUnit.pas" />
+    <DCCReference Include="PMWindowUnit.pas">
+      <Form>PMWindow</Form>
+    </DCCReference>
+    <DCCReference Include="PreferencesUnit.pas">
+      <Form>PreferencesForm</Form>
+    </DCCReference>
+    <DCCReference Include="Recorder.pas" />
+    <DCCReference Include="RegisterForm.pas">
+      <Form>RegisterFrm</Form>
+    </DCCReference>
+    <DCCReference Include="RoomWindowUnit.pas">
+      <Form>RoomWindow</Form>
+    </DCCReference>
+    <DCCReference Include="SmilesUnit.pas">
+      <Form>SmilesForm</Form>
+    </DCCReference>
+    <DCCReference Include="UpdateUnit.pas">
+      <Form>UpdateForm</Form>
+    </DCCReference>
+    <DCCReference Include="VideoHeader.pas" />
+    <DCCReference Include="VolumeCtrlUnit.pas">
+      <Form>VolControlForm</Form>
+    </DCCReference>
+    <DCCReference Include="WebCamViewerUnit.pas">
+      <Form>WebcamViewerForm</Form>
+    </DCCReference>
+    <DCCReference Include="WhisperUnit.pas">
+      <Form>WhisperForm</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>
