@@ -1,0 +1,116 @@
+
+--------------------------------2008/8/24 9:31:57--------------------------------
+FastMM has detected an error during a FreeMem operation. The block footer has been corrupted. 
+
+The block size is: 8192
+
+Stack trace of when this block was allocated (return addresses):
+402A67 [system.pas][System][@GetMem][2447]
+53B4F7 [ACMConverterUnit.pas][ACMConverterUnit][TACMConverter.OpenStream][149]
+53BB73 [ACMEncoderUnit.pas][ACMEncoderUnit][TACMEncoder.OpenCodec][197]
+5F0168 [PlayThreadUnit.pas][PlayThreadUnit][TPlayThread.CreateObjects][354]
+5F0506 [PlayThreadUnit.pas][PlayThreadUnit][TPlayThread.Execute][423]
+701A1A [GetRawStackTrace]
+42B539 [classes.pas][Classes][ThreadProc][9372]
+402A87 [system.pas][System][@FreeMem][2474]
+404E6A [system.pas][System][ThreadWrapper][11562]
+7C80B713 [Unknown function at GetModuleFileNameA]
+
+The block is currently used for an object of class: Unknown
+
+The allocation number is: 13935
+
+The current stack trace leading to this error (return addresses): 
+402A87 [system.pas][System][@FreeMem][2474]
+53B1F6 [ACMConverterUnit.pas][ACMConverterUnit][TACMConverter.CloseStream][68]
+53B957 [ACMEncoderUnit.pas][ACMEncoderUnit][TACMEncoder.CloseCodec][130]
+406CE7 [system.pas][System][@IntfClear][17033]
+5F0483 [PlayThreadUnit.pas][PlayThreadUnit][TPlayThread.DestroyObjects][398]
+5F09D4 [PlayThreadUnit.pas][PlayThreadUnit][TPlayThread.Execute][507]
+701A1A [GetRawStackTrace]
+42B539 [classes.pas][Classes][ThreadProc][9372]
+402A87 [system.pas][System][@FreeMem][2474]
+404E6A [system.pas][System][ThreadWrapper][11562]
+
+Current memory dump of 256 bytes starting at pointer address 7FD75A30:
+21 F0 01 86 A9 64 68 17 12 46 B1 54 9D 90 C7 6A A3 54 1A 4C F1 53 FE 9E AC 37 1F 89 B8 B6 B5 A7
+20 61 D5 82 3C CC 62 79 00 44 5C 44 79 57 10 D8 7B 2C 3A B3 A8 CC 7C E2 9A AA 3E 19 B8 B3 A8 E8
+22 41 93 73 6D 9A C8 0D 53 0A A5 F5 41 F9 DB BA E7 AC 6A B7 E6 CF 43 8D 73 72 76 A9 7B 43 A1 4E
+21 F0 25 89 47 35 EC 16 57 C9 3B 89 8D 39 27 B2 3E BE 82 25 B0 D9 FE BD 4E F3 C3 09 FB F5 29 6A
+21 E5 31 8E 3E 8D 09 0A 2E 5C 9C EF 19 93 A0 97 42 18 E2 4C ED 56 FC B1 05 8A F2 79 F9 A4 21 49
+20 68 D5 85 29 D6 A2 6B 26 51 EF 92 2F 00 7E 5E 57 F9 3F B0 AC E2 83 CE A3 59 E7 B9 F9 A3 9D 08
+25 C7 45 77 7E AA 28 F5 68 75 91 9F 9B 71 4F 9A 5E CD FE 14 F6 C8 7C D1 1E 0B 58 49 BC 65 25 6A
+24 2D 65 84 FB C8 40 57 62 65 BB BC 6A 53 60 08 FC F5 78 3B A2 A6 4E AD 7A B6 03 49 BA 63 9D 07
+!    .  Ü  ©  d  h  .  .  F  ±  T  ù  ê  «  j  £  T  .  L  Ò  S  ˛  û  ¨  7  .  â  ∏  ∂  µ  ß
+   a  ’  Ç  <  Ã  b  y  .  D  \  D  y  W  .  ÿ  {  ,  :  ≥  ®  Ã  |  ‚  ö  ™  >  .  ∏  ≥  ®  Ë
+"  A  ì  s  m  ö  »  .  S  .  •  ı  A  ˘  €  ∫  Á  ¨  j  ∑  Ê  œ  C  ç  s  r  v  ©  {  C  °  N
+!    %  â  G  5  Ï  .  W  …  ;  â  ç  9  '  ≤  >  æ  Ç  %  ∞  Ÿ  ˛  Ω  N  Û  √  .  ˚  ı  )  j
+!  Â  1  é  >  ç  .  .  .  \  ú  Ô  .  ì  †  ó  B  .  ‚  L  Ì  V  ¸  ±  .  ä  Ú  y  ˘  §  !  I
+   h  ’  Ö  )  ÷  ¢  k  &  Q  Ô  í  /  .  ~  ^  W  ˘  ?  ∞  ¨  ‚  É  Œ  £  Y  Á  π  ˘  £  ù  .
+%  «  E  w  ~  ™  (  ı  h  u  ë  ü  õ  q  O  ö  ^  Õ  ˛  .  ˆ  »  |  —  .  .  X  I  º  e  %  j
+$  -  e  Ñ  ˚  »  @  W  b  e  ª  º  j  S  `  .  ¸  ı  x  ;  ¢  ¶  N  ≠  z  ∂  .  I  ∫  c  ù  .
+
+--------------------------------2008/8/24 9:32:41--------------------------------
+FastMM has detected an attempt to call a virtual method on a freed object. An access violation will now be raised in order to abort the current operation.
+
+Freed object class: TControlCanvas
+
+Virtual method: Destroy
+
+Virtual method address: 472014
+
+The allocation number was: 26353
+
+Stack trace of when the object was allocated (return addresses):
+402A67 [system.pas][System][@GetMem][2447]
+403F73 [system.pas][System][TObject.NewInstance][8368]
+40433A [system.pas][System][@ClassCreate][9027]
+43049A [Graphics.pas][Graphics][TCanvas.Create][2000]
+49244F [Forms.pas][Forms][TCustomForm.CreateNew][2596]
+492209 [Forms.pas][Forms][TCustomForm.Create][2556]
+4922EE [Forms.pas][Forms][TCustomForm.Create][2569]
+7E41885A [Unknown function at GetDC]
+7E41882A [Unknown function at GetDC]
+7E41882A [Unknown function at GetDC]
+
+Stack trace of when the object was subsequently freed (return addresses):
+402A87 [system.pas][System][@FreeMem][2474]
+403F91 [system.pas][System][TObject.FreeInstance][8374]
+404385 [system.pas][System][@ClassDestroy][9068]
+472049 [Controls.pas][Controls][TControlCanvas.Destroy][2984]
+403FD7 [system.pas][System][TObject.Free][8393]
+492653 [Forms.pas][Forms][TCustomForm.Destroy][2635]
+492696 [Forms.pas][Forms][TCustomForm.Destroy][2640]
+403FD7 [system.pas][System][TObject.Free][8393]
+4397FE [Contnrs.pas][Contnrs][TObjectList.Notify][304]
+4210AB [classes.pas][Classes][TList.Delete][2779]
+
+The current stack trace leading to this error (return addresses): 
+403FD7 [system.pas][System][TObject.Free][8393]
+492653 [Forms.pas][Forms][TCustomForm.Destroy][2635]
+492696 [Forms.pas][Forms][TCustomForm.Destroy][2640]
+42BEAD [classes.pas][Classes][TComponent.DestroyComponents][9853]
+42BBC0 [classes.pas][Classes][TComponent.Destroy][9757]
+472A55 [Controls.pas][Controls][TControl.Destroy][3242]
+404385 [system.pas][System][@ClassDestroy][9068]
+43017B [Graphics.pas][Graphics][TBrush.Destroy][1841]
+4772CA [Controls.pas][Controls][TWinControl.Destroy][5439]
+491813 [Forms.pas][Forms][TScrollingWinControl.Destroy][2076]
+
+Current memory dump of 256 bytes starting at pointer address 7FC6B240:
+84 2C 60 00 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80 80
+80 80 80 80 EE 15 AE 00 00 00 00 00 70 A5 C6 7F 00 00 00 00 00 00 00 00 FF FF FF FF 00 00 00 00
+4F 67 00 00 67 2A 40 00 73 3F 40 00 3A 43 40 00 9A 04 43 00 DD 28 47 00 A4 DD 47 00 50 2B 44 00
+B8 6A 42 00 ED 6C 42 00 D1 61 42 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 64 00 00 00 00 00 00 00 57 37 65 82
+24 DA 46 00 00 00 00 00 00 00 00 00 D0 5A C7 7F 98 E9 C7 7F 00 E9 C7 7F 00 00 00 00 00 00 00 00
+Ñ  ,  `  .  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä  Ä
+Ä  Ä  Ä  Ä  Ó  .  Æ  .  .  .  .  .  p  •  ∆    .  .  .  .  .  .  .  .  ˇ  ˇ  ˇ  ˇ  .  .  .  .
+O  g  .  .  g  *  @  .  s  ?  @  .  :  C  @  .  ö  .  C  .  ›  (  G  .  §  ›  G  .  P  +  D  .
+∏  j  B  .  Ì  l  B  .  —  a  B  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .
+.  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  d  .  .  .  .  .  .  .  W  7  e  Ç
+$  ⁄  F  .  .  .  .  .  .  .  .  .  –  Z  «    ò  È  «    .  È  «    .  .  .  .  .  .  .  .

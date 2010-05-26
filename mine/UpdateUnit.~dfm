@@ -1,0 +1,40 @@
+object UpdateForm: TUpdateForm
+  Left = 192
+  Top = 114
+  Width = 387
+  Height = 120
+  Caption = 'Update'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Gauge1: TGauge
+    Left = 8
+    Top = 20
+    Width = 361
+    Height = 20
+    Progress = 0
+  end
+  object Label1: TLabel
+    Left = 8
+    Top = 4
+    Width = 62
+    Height = 13
+    Caption = 'Downloading'
+  end
+  object CancelButton: TButton
+    Left = 152
+    Top = 52
+    Width = 75
+    Height = 25
+    Caption = 'Cancel'
+    TabOrder = 0
+    OnClick = CancelButtonClick
+  end
+end

@@ -1,0 +1,3 @@
+beyluxe.exe
+pause
+exit
